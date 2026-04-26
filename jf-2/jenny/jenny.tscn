@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://cfwwvjf3ydip0"]
+
+[ext_resource type="Script" uid="uid://d2f2elpwcm0ml" path="res://jenny/jenny.gd" id="1_6h4ja"]
+[ext_resource type="Texture2D" uid="uid://bnidnp4urnguw" path="res://assets/Pixel Plains Premium Pack/Characters 24x24/Basic Bunny character v1.png" id="2_6h4ja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3c4c"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwwm2"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eieu"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l6le"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ehk"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xq3a"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj62w"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drgjw"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh4if"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuj2m"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4wmy"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj7oc"]
+atlas = ExtResource("2_6h4ja")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iuj2m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3c4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwwm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eieu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l6le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ehk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xq3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj62w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drgjw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh4if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuj2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4wmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj7oc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4wmy"]
+radius = 6.0
+height = 22.0
+
+[node name="jenny" type="CharacterBody2D" unique_id=679742925]
+motion_mode = 1
+script = ExtResource("1_6h4ja")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1876062973]
+modulate = Color(1, 1, 0.13333334, 1)
+sprite_frames = SubResource("SpriteFrames_iuj2m")
+animation = &"walk"
+frame_progress = 0.37906766
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=413140334]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_q4wmy")

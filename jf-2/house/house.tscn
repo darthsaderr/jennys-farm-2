@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bh3kaji50vpy4"]
+
+[ext_resource type="Texture2D" uid="uid://xvd1fg7ixj7o" path="res://assets/Harvest Sumer Full Ver. Pack/House and parts/HS House pref 1.png" id="1_g0npy"]
+
+[sub_resource type="ConcavePolygonShape2D" id="ConcavePolygonShape2D_g0npy"]
+segments = PackedVector2Array(-35, 30.5, -35, -15.5, -35, -15, 35, -15, 35, -15, 35, 30, 35, 30.5, 12, 30.5, 12, 30, 12, -1.5, 12, -1.5, -12, -1.5, -12, -1.5, -12, 30.5, -12, 30.5, -35, 30.5)
+
+[node name="house" type="StaticBody2D" unique_id=969033678]
+metadata/_edit_vertical_guides_ = [-35.0, 35.0, 11.0]
+metadata/_edit_horizontal_guides_ = [32.0, 0.0, 46.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1734926195]
+texture = ExtResource("1_g0npy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118667885]
+position = Vector2(0, 15.5)
+shape = SubResource("ConcavePolygonShape2D_g0npy")
